@@ -27,7 +27,6 @@
 			<div class="logo-wrapper">
 				<div class="header-logo">
 					<a href="/">
-						LOGO
 					<!--	<img src="<?php echo get_template_directory_uri(); ?>/img/ [ADD LOGO]" > -->
 					</a>
 				</div>
