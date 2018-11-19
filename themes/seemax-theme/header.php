@@ -24,22 +24,18 @@
 </div> -->
 	<header class="header" role="banner">
 		<div class="content header-inner-wrap">
-			<div class="logo-wrapper">
-				<div class="header-logo">
-					<a href="/">
-					<!--	<img src="<?php echo get_template_directory_uri(); ?>/img/ [ADD LOGO]" > -->
-					</a>
-				</div>
+			<div class="header-logo">
+				<a href="/">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" >
+				</a>
 			</div>
-			<div class="all-navs-wrapper">
-				<nav class="main-nav mainNav" role="navigation">
-					<?php main_theme_nav(); ?>
-				</nav>
-				<div class="mobile-menu mobileToggle">
-					<span class="hamTop"></span>
-					<span class="hamMid"></span>
-					<span class="hamBot"></span>
-				</div>
+			<nav class="main-nav mainNav" role="navigation">
+				<?php main_theme_nav(); ?>
+			</nav>
+			<div class="mobile-menu mobileToggle">
+				<span class="hamTop"></span>
+				<span class="hamMid"></span>
+				<span class="hamBot"></span>
 			</div>
 		</div>
 	</header>

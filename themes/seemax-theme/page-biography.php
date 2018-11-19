@@ -1,5 +1,5 @@
-<?php /* Template Name: Contact */ get_header(); ?>
-<main class="contact-page">
+<?php /* Template Name: Biography */ get_header(); ?>
+<main class="biography-page">
 	<?php while (have_posts()) : the_post(); ?>
 		<section class="main-section">
 			<div class="content">

@@ -1,37 +1,72 @@
 @import "colors";
 
 .header {
-	font:400 12px/19px sans-serif;
+	background:white;
+	border-bottom: 1px solid $offWhite;
 
 	.content {
-		padding-top:30px;
-		padding-bottom:30px;
+		padding-top:24px;
+		padding-bottom:24px;
 		justify-content: space-between;
-
+		align-items: center;
 	}
 }
 
 .header-logo {
 	position: relative;
+	width:300px;
+	height:auto;
 
 	img {
-		height:100%;
-		width:auto;
+		width:100%;
+		height:auto;
 	}
 }
 
 .main-nav {
 
-	a {
-
-	}
-
 	ul {
-
+		display: flex;
+		flex-wrap:wrap;
+		align-items: center;
+		font-size:14px;
 	}
 
 	li {
+		display: inline-block;
+		height:auto;
+		padding:4px 0px;
 
+		a {
+			color:$maroon;
+			padding:4px 14px;
+		}
+
+		&:nth-of-type(1) {
+
+			a {
+				padding-left:0px;
+			}
+		}
+
+		&:after {
+			content:"";
+			position:absolute;
+			top:0;
+			right:0;
+			display: inline-block;
+			height:100%;
+			width:1px;
+			background:$offWhite;
+			transform:rotate(15deg);
+		}
+
+		&:nth-last-of-type(1) {
+
+			&:after {
+				width:0px;
+			}
+		}
 	}
 }
 
@@ -60,6 +95,6 @@
 @media screen and (max-width: 767px){
 
 	.header {
-		
+
 	}
 }

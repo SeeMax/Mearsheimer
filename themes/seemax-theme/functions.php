@@ -286,7 +286,7 @@ add_action('init', 'modify_jquery_version');
 
 /* Enqueue Styles */
 function theme_style() {
-  // wp_enqueue_style( 'google-fonts', "https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Roboto:300i,400,400i,500,500i,700,700i", false );
+  wp_enqueue_style( 'google-fonts', "https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600,700|Roboto:300,400,700,900", false );
 
   wp_register_style('fontawesome', '//use.fontawesome.com/releases/v5.0.9/css/all.css', array(), '5.0.9', 'all');
   wp_enqueue_style('fontawesome'); // Enqueue it!
