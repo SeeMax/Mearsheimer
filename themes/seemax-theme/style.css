@@ -209,7 +209,7 @@ section {
   height: auto;
   max-width: 1150px;
   margin: 0px auto;
-  padding: 100px 25px 150px 25px; }
+  padding: 100px 25px 100px 25px; }
 
 a {
   color: #591829;
@@ -223,20 +223,19 @@ h1, h2, h3, h4, h5 {
   width: 100%; }
 
 h1 {
-  background: #591829;
+  border-bottom: 1px solid #591829;
   color: #260108;
   font-weight: 700;
   font-size: 5.063em; }
 
 h2 {
-  background: #101829;
-  color: #070B12;
+  border-bottom: 1px solid #122652;
+  color: #101829;
   font-weight: 600;
-  font-size: 3.375em; }
+  font-size: 3.85em; }
 
 h3 {
-  background: #92A4A6;
-  color: #657173;
+  color: #101829;
   font-weight: 400;
   font-size: 2.25em; }
 
@@ -262,14 +261,25 @@ hr {
   height: 1px; }
 
 .button {
+  font-weight: 100;
+  display: inline-block;
   position: relative;
-  font: 400 14px/1 sans-serif;
+  letter-spacing: 1px;
+  font-size: 18px;
+  line-height: 1.2;
   text-transform: uppercase;
-  background: white;
-  color: black;
-  padding: 10px 35px; }
+  background: #657173;
+  color: #e4e4e4;
+  padding: 14px 16px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
   .button a {
     color: red; }
+  .button:hover {
+    background: #260108;
+    color: #e4e4e4;
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px); }
 
 .background-image-section {
   background: no-repeat center center;
@@ -918,8 +928,38 @@ hr {
 .mobile-menu {
   display: none; }
 
-.single-course-link {
-  width: 100%; }
+.single-course {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 14px 0px 10px 0; }
+  .single-course .button {
+    font-weight: 100;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 1px;
+    font-size: 14px;
+    background: white;
+    color: #591829;
+    padding: 14px 16px; }
+    .single-course .button i {
+      font-size: 28px; }
+  .single-course:nth-of-type(1) {
+    border-top: 1px solid #e4e4e4; }
+
+.single-course-info {
+  display: inline-block;
+  width: auto; }
 
 .single-course-name {
   display: inline-block; }

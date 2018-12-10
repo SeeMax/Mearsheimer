@@ -4,12 +4,46 @@
 
 }
 
-.single-course-link {
+.courses-section {
+
+}
+
+.course-section-description {
+
+}
+
+.single-course {
   width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $offWhite;
+  padding:14px 0px 10px 0;
 
   .button {
+    font-weight: 100;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 1px;
+    font-size: 14px;
+    background:white;
+    color:$red;
+    padding:14px 16px;
 
+    i {
+      font-size:28px;
+    }
   }
+
+  &:nth-of-type(1) {
+    border-top: 1px solid $offWhite;
+  }
+}
+
+.single-course-info {
+  display: inline-block;
+  width:auto;
 }
 
 .single-course-name {
