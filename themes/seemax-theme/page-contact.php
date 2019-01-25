@@ -4,7 +4,10 @@
 		<section class="main-section">
 			<div class="content">
 				<h1><?php the_title(); ?></h1>
-				<?php the_content(); ?>
+				<?php the_field('address', 'options'); ?>
+				<?php the_field('email', 'options'); ?>
+				<?php the_field('phone', 'options'); ?>
+				<?php the_field('fax', 'options'); ?>
 			</div>
 		</section>
 	<?php endwhile; ?>

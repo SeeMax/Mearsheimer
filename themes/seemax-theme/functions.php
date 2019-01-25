@@ -387,9 +387,9 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page(array(
-        'page_title'    => 'Global Options',
-        'menu_title'    => 'Global Options',
-        'menu_slug'    => 'global_options',
+        'page_title'    => 'Contact Info',
+        'menu_title'    => 'Contact Info',
+        'menu_slug'    => 'contact_info',
         'capability'    => 'edit_posts',
         'redirect'    => false,
         'icon_url' => 'dashicons-media-spreadsheet',
