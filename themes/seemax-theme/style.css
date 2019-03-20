@@ -228,7 +228,8 @@ h1 {
   border-bottom: 1px solid #591829;
   color: #260108;
   font-weight: 700;
-  font-size: 5.063em; }
+  font-size: 5.063em;
+  margin-bottom: .2em; }
 
 h2 {
   border-bottom: 1px solid #122652;
@@ -931,15 +932,16 @@ hr {
   display: none; }
 
 .single-course {
+  position: relative;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -952,10 +954,10 @@ hr {
     letter-spacing: 1px;
     font-size: 14px;
     background: white;
-    color: #591829;
-    padding: 14px 16px; }
+    color: #e4e4e4;
+    padding: 5px 0px 5px 15px; }
     .single-course .button i {
-      font-size: 28px; }
+      font-size: 40px; }
   .single-course:nth-of-type(1) {
     border-top: 1px solid #e4e4e4; }
 

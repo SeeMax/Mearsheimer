@@ -288,7 +288,7 @@ add_action('init', 'modify_jquery_version');
 function theme_style() {
   wp_enqueue_style( 'google-fonts', "https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600,700|Roboto:300,400,700,900", false );
 
-  wp_register_style('fontawesome', '//use.fontawesome.com/releases/v5.0.9/css/all.css', array(), '5.0.9', 'all');
+  wp_register_style('fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '5.5', 'all');
   wp_enqueue_style('fontawesome'); // Enqueue it!
 
   wp_register_style('themefonts', get_template_directory_uri() . '/fonts/fonts.css', array(), '1.0', 'all');

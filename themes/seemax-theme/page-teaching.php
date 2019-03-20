@@ -16,6 +16,7 @@
 				<?php the_field('courses_note');?>
 				<?php if(have_rows('course_links')): while (have_rows('course_links')): the_row();?>
 					<div class="single-course">
+						<a class="c-block-fill" href='<?php the_sub_field('single_course_pdf'); ?>'></a>
 						<div class="single-course-info">
 							<h3 class="single-course-name">
 								<?php the_sub_field('single_course_name'); ?>
@@ -24,10 +25,7 @@
 								<?php the_sub_field('single_course_date'); ?>
 							</div>
 						</div>
-						<div class="button">
-							<a class="c-block-fill" href='<?php the_sub_field('single_course_pdf'); ?>'></a>
-							<i class="far fa-arrow-alt-circle-down"></i>
-						</div>
+						<i class="fal fa-arrow-to-bottom"></i>
 					</div>
 				<?php endwhile; endif;?>
 			</div>

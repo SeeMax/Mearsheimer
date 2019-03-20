@@ -13,10 +13,11 @@
 }
 
 .single-course {
+  position: relative;
   width:100%;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items:flex-start;
   justify-content: space-between;
   border-bottom: 1px solid $offWhite;
   padding:14px 0px 10px 0;
@@ -28,11 +29,11 @@
     letter-spacing: 1px;
     font-size: 14px;
     background:white;
-    color:$red;
-    padding:14px 16px;
+    color:$offWhite;
+    padding:5px 0px 5px 15px;
 
     i {
-      font-size:28px;
+      font-size:40px;
     }
   }
 
