@@ -26,7 +26,13 @@
 		<div class="content header-inner-wrap">
 			<div class="header-logo">
 				<a href="/">
+					<div class="logo-subhead">
+						R. Wendell Harrison Distinguished Professor of Political Science
+					</div>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" >
+					<div class="logo-subhead">
+						The University of Chicago
+					</div>
 				</a>
 			</div>
 			<nav class="main-nav mainNav" role="navigation">

@@ -657,3 +657,10 @@ add_action( 'admin_menu', 'remove_menus', 9999);
 
 /*	DISABLE XMLRPC 	*/
 add_filter('xmlrpc_enabled', '__return_false');
+
+
+function wpse_user_admin_script() {
+    wp_register_style( 'wpse_admin_user_css', get_stylesheet_directory_uri() . '/wpse_admin_user.css' );
+    wp_enqueue_style( 'wpse_admin_user_css' );
+}
+add_action( 'admin_enqueue_scripts', 'wpse_user_admin_script' );
