@@ -63,7 +63,7 @@
 			right:-1px;
 			display: inline-block;
 			height:100%;
-			width:100%;
+			width:101%;
 			background:white;
 			transition:all 0.3s ease-out;
 			transform: skew(-20deg, 0deg);
@@ -80,8 +80,13 @@
 
 		&:hover {
 
+			a {
+				color:white;
+			}
+
 			&:before {
-				border:1px solid $offWhite;
+				background:$red;
+				border-right:1px solid $red;
 			}
 
 			&:nth-of-type(1) {
@@ -99,16 +104,30 @@ li.current-menu-item {
 	&:before {
 		// background: $offWhite;
 		border-left:1px solid $red;
-		border-right:1px solid $red;
 	}
 
 	a {
 		color:$red;
 	}
+
+	&:hover {
+
+		a {
+			color:white;
+		}
+	}
 }
 
 .mobile-menu {
 	display: none;
+}
+
+li.current-menu-item + li {
+
+	&:before {
+		border-left:1px solid $red;
+	}
+
 }
 
 // 1024px And Below

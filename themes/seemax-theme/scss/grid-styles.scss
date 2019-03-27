@@ -46,7 +46,7 @@
   align-content: flex-start;
   justify-content: space-between;
   border: 1px solid $offWhite;
-  padding:32px 26px 26px 26px;
+  padding:26px 26px 24px 26px;
   overflow: hidden;
 
   .grid-name {
@@ -81,8 +81,9 @@
   }
 
   .grid-publication-name {
+    width:88%;
     font-weight: 400;
-    margin-bottom:4px;
+    margin-bottom:8px;
     color:$gray;
   }
 
@@ -140,7 +141,40 @@
     grid-template-columns: 1fr;
   }
 
+  .grid-container-two {
+
+    .grid-item {
+
+      &:nth-of-type(1) {
+        border-top:1px solid $offWhite;
+      }
+
+      &:nth-of-type(2), &:nth-of-type(3) {
+        border-top:0px solid $offWhite;
+      }
+
+      &:nth-of-type(even) {
+        border-left:1px solid $offWhite;
+      }
+    }
+  }
+
+  .grid-container-three {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    .grid-item {
+      border-right:1px solid $offWhite;
+
+      &:nth-of-type(1) {
+        border-top:1px solid $offWhite;
+      }
+    }
+  }
+
   .grid-item {
-    padding-top:22px;
+    padding-top:34px;
+    padding-bottom:34px;
   }
 }

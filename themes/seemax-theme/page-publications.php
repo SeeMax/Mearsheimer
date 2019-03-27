@@ -11,17 +11,25 @@
 			</section>
 			<section class="page-subnav-section">
 				<div class="content">
-					<div class="subnav-link title-link">
-						Jump To:
-					</div>
-					<div class="subnav-link">
-						<a class="c-block-fill" href="books"></a>
-						Books
-					</div>
-					<div class="subnav-link">
-						<a class="c-block-fill" href="#unpublished"></a>
-						Unpublished
-					</div>
+					<?php if( have_rows('publication_lists') ):
+						while ( have_rows('publication_lists') ) : the_row();?>
+
+							<?php if( have_rows('publication_section') ):
+								while ( have_rows('publication_section') ) : the_row();?>
+
+									<?php $linkName = get_sub_field('title');?>
+									<?php $linkName = str_replace(' ', '', $linkName);?>
+									<?php $linkName = strtolower($linkName);?>
+
+									<div class="subnav-link">
+										<a class="c-block-fill" href="#<?php echo $linkName;?>"></a>
+										<?php the_sub_field('title');?>
+									</div>
+								<?php endwhile;?>
+							<?php endif;?>
+						<!-- Publication List Group -->
+						<?php endwhile;?>
+					<?php endif;?>
 				</div>
 			</section>
 			<section class="publication-section">
@@ -33,9 +41,13 @@
 							<?php if( have_rows('publication_section') ):
 						  	while ( have_rows('publication_section') ) : the_row();?>
 
-									<div class="publication-section-group">
+								<?php $linkName = get_sub_field('title');?>
+								<?php $linkName = str_replace(' ', '', $linkName);?>
+								<?php $linkName = strtolower($linkName);?>
+
+									<div id ="<?php echo $linkName;?>" class="publication-section-group">
 										<div class="publication-section-intro">
-											<h2 class="c-width-50"><?php the_sub_field('title');?></h2>
+											<h2><?php the_sub_field('title');?></h2>
 							        <p class="publication-section-description">
 												<?php the_sub_field('description');?>
 											</p>
@@ -46,8 +58,12 @@
 
 						            	<?php if( have_rows('single') ):
 						              	while ( have_rows('single') ) : the_row();?>
+															<?php $bookImage = get_sub_field('image');?>
 															<div class="single-publication grid-item grid-item-halves">
 																<div class="color-back"></div>
+																<?php if($bookImage):?>
+																	<img class="publication-book" src="<?php echo $bookImage['url'];?>">
+																<?php endif;?>
 																<div class="grid-info">
 																	<?php if(get_sub_field('publisher')):?>
 																		<h4 class="grid-publication-name">
@@ -67,11 +83,11 @@
 																<div class="single-publication-link">
 																	<?php if( get_sub_field('link') == 'File' ): ?>
 																		<div class="button grid-button">
-																			Download <i class="fal fa-arrow-down"></i>
+																			PDF <i class="fal fa-arrow-down"></i>
 																		</div>
 																	<?php elseif( get_sub_field('link') == 'Link' ): ?>
 																		<div class="button grid-button">
-																			Visit <i class="fal fa-arrow-right"></i>
+																			View <i class="fal fa-arrow-right"></i>
 																		</div>
 																	<?php endif; ?>
 																</div>

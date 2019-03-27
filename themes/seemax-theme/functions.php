@@ -258,8 +258,8 @@ function theme_header_scripts() {
     // wp_register_script('slickslider', get_template_directory_uri() . '/js/lib/slick.js', array('jquery'), '1.6.0', true);
     // wp_enqueue_script('slickslider');
 
-    //  wp_register_script('SmoothScroll', get_template_directory_uri() . '/js/lib/smooth-scroll.js', array(), '0.131', true);
-    //  wp_enqueue_script('SmoothScroll');
+     wp_register_script('SmoothScroll', get_template_directory_uri() . '/js/lib/smooth-scroll.js', array(), '0.131', true);
+     wp_enqueue_script('SmoothScroll');
 
     wp_register_script('Tweenmax', get_template_directory_uri() . '/js/lib/TweenMax.min.js', array(), '1.19.1', true);
     wp_enqueue_script('Tweenmax');
@@ -658,9 +658,16 @@ add_action( 'admin_menu', 'remove_menus', 9999);
 /*	DISABLE XMLRPC 	*/
 add_filter('xmlrpc_enabled', '__return_false');
 
-
+// CSS For WP Admin Screen
 function wpse_user_admin_script() {
     wp_register_style( 'wpse_admin_user_css', get_stylesheet_directory_uri() . '/wpse_admin_user.css' );
     wp_enqueue_style( 'wpse_admin_user_css' );
 }
 add_action( 'admin_enqueue_scripts', 'wpse_user_admin_script' );
+
+
+// Jquery For WP Admin Screen
+function my_enqueue($hook) {
+  wp_enqueue_script('my_custom_script', get_template_directory_uri() . '/adminscript.js');
+}
+add_action('admin_enqueue_scripts', 'my_enqueue');

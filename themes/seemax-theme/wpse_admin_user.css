@@ -1,3 +1,57 @@
-[data-name="publication_section"] {
-  border-bottom:6px solid black !important;
+[data-name="publication_lists"] table {
+  border-collapse: collapse;
+}
+
+[data-name="publication_lists"] tr{
+  border:2pt solid #260108 !important;
+  padding-top:10px;
+  background-color:red;
+}
+
+[data-name="publication_section"] tr {
+  border:2pt solid #591829 !important;
+  background-color:#f0f8ff;
+}
+
+.not-this-acf *{
+  background-color:darkgray !important;
+  color:darkgray !important;
+  border: 1px solid darkgray !important;
+  text-shadow: none !important;
+}
+
+.not-this-acf [data-name="title"] .acf-input input[type="text"]{
+  color:black !important;
+  background:white !important;
+  font-size:20px!important;
+  padding:20px 10px!important;
+  border: 1px solid black !important;
+}
+
+.not-this-acf .acf-field .acf-label {
+  display: none !important;
+}
+
+.not-this-acf [data-name="title"] {
+  position: relative !important;
+  padding-top:0px!important;
+}
+
+.acf-toggle {
+  border:1px solid black;
+  padding:4px 10px;
+  margin-bottom:5px;
+  margin-left:16px;
+  display: inline-block;
+  background:#260108 !important;
+  color:white;
+  cursor:pointer;
+}
+
+
+.not-this-acf .acf-toggle {
+  border:1px solid black !important;
+  background:white !important;
+  color:black!important;
+  margin-bottom:0px!important;
 }
