@@ -1,14 +1,20 @@
-[data-name="publication_lists"] table {
+[data-name="publication_lists"] table,
+[data-name="public_appearance_lists"] table,
+[data-name="recent_lists"] table {
   border-collapse: collapse;
 }
 
-[data-name="publication_lists"] tr{
+[data-name="publication_lists"] tr,
+[data-name="public_appearance_lists"] tr,
+[data-name="recent_section_lists"] {
   border:2pt solid #260108 !important;
   padding-top:10px;
   background-color:red;
 }
 
-[data-name="publication_section"] tr {
+[data-name="publication_section"] tr,
+[data-name="public_appearance_section"] tr,
+[data-name="recent_section"] tr {
   border:2pt solid #591829 !important;
   background-color:#f0f8ff;
 }
@@ -54,4 +60,19 @@
   background:white !important;
   color:black!important;
   margin-bottom:0px!important;
+}
+
+.not-this-acf .acf-row-handle {
+  background-color:white !important;
+}
+
+.not-this-acf .acf-row-handle .acf-icon {
+  background-color:white !important;
+  color:gray !important;
+}
+
+.not-this-acf .acf-row-handle span{
+  background-color:white !important;
+  color:gray !important;
+  border:0px solid white !important;
 }

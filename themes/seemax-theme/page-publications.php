@@ -45,12 +45,9 @@
 								<?php $linkName = str_replace(' ', '', $linkName);?>
 								<?php $linkName = strtolower($linkName);?>
 
-									<div id ="<?php echo $linkName;?>" class="publication-section-group">
-										<div class="publication-section-intro">
+									<div id ="<?php echo $linkName;?>" class="grid-section-group">
+										<div class="grid-section-intro">
 											<h2><?php the_sub_field('title');?></h2>
-							        <p class="publication-section-description">
-												<?php the_sub_field('description');?>
-											</p>
 										</div>
 										<div class="publication-section-publications grid-container-two">
 						        	<?php if( have_rows('list') ):
@@ -59,6 +56,7 @@
 						            	<?php if( have_rows('single') ):
 						              	while ( have_rows('single') ) : the_row();?>
 															<?php $bookImage = get_sub_field('image');?>
+															<?php $pubNote = get_sub_field('publication_note');?>
 															<div class="single-publication grid-item grid-item-halves">
 																<div class="color-back"></div>
 																<?php if($bookImage):?>
@@ -67,18 +65,20 @@
 																<div class="grid-info">
 																	<?php if(get_sub_field('publisher')):?>
 																		<h4 class="grid-publication-name">
-																			<?php if(get_sub_field('publisher')):?>
-																				<?php the_sub_field('publisher');?>
-																			<?php endif;?>
+																			<?php the_sub_field('publisher');?>
 																		</h4>
 																	<?php endif;?>
-
 																	<h3 class="grid-name">
 																		<?php the_sub_field('title');?>
 																	</h3>
 																	<h4 class="grid-author">
 																		<?php the_sub_field('author');?>
 																	</h4>
+																	<?php if($pubNote):?>
+																		<div class="grid-item-note">
+																			<?php echo $pubNote;?>
+																		</div>
+																	<?php endif;?>
 																</div>
 																<div class="single-publication-link">
 																	<?php if( get_sub_field('link') == 'File' ): ?>

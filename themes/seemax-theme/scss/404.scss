@@ -1,0 +1,16 @@
+@import "colors";
+
+.four-oh-four-page {
+  min-height:400px;
+
+
+  .button {
+    font-size:18px;
+    border:1px solid $maroon;
+    color:$red;
+
+    &:hover {
+      color:white;
+    }
+  }
+}
