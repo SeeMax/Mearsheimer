@@ -83,11 +83,11 @@
 																<div class="single-publication-link">
 																	<?php if( get_sub_field('link') == 'File' ): ?>
 																		<div class="button grid-button">
-																			PDF <i class="fal fa-arrow-down"></i>
+																			PDF <i class="fal fa-file"></i>
 																		</div>
 																	<?php elseif( get_sub_field('link') == 'Link' ): ?>
 																		<div class="button grid-button">
-																			View <i class="fal fa-arrow-right"></i>
+																			View <i class="fal fa-globe"></i>
 																		</div>
 																	<?php endif; ?>
 																</div>

@@ -1,0 +1,71 @@
+@import "colors";
+
+.contact-page {
+
+  .hero-section {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0);
+  }
+
+  .contact-block-container {
+    width:100%;
+    display: flex;
+    flex-wrap:wrap;
+    // padding-bottom:100px;
+    // padding-top:50px;
+    font-size:18px;
+
+    i {
+      color:$red;
+      margin-left:6px;
+      transition:color .3s;
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color:$red;
+    border-bottom: 1px solid $red;
+    margin-bottom: 14px;
+    padding-bottom:7px;
+    font-size:40px;
+  }
+
+  a {
+    color:white;
+
+    &:hover {
+
+      i {
+        color:white;
+      }
+    }
+  }
+
+  .contact-page-block {
+    width:100%;
+    margin-bottom:40px;
+    padding-right:7%;
+
+    p {
+      margin:0;
+    }
+  }
+}
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+  .contact-page {
+
+    .contact-block-container {
+      padding-bottom:0px;
+      padding-top:0px;
+    }
+  }
+
+}
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+}

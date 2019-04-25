@@ -75,17 +75,17 @@
 															<div class="single-publication-link">
 																<?php if( get_sub_field('link') == 'PDF' ): ?>
 																	<div class="button grid-button">
-																		Read <i class="fas fa-file"></i>
+																		Read <i class="fal fa-file"></i>
 																	</div>
 																<?php elseif( get_sub_field('link') == 'Audio' ): ?>
 																	<div class="button grid-button">
 																		<!-- View <i class="fal fa-arrow-right"></i> -->
-																		Listen <i class="far fa-microphone"></i>
+																		Listen <i class="fal fa-microphone"></i>
 																	</div>
 																<?php elseif( get_sub_field('link') == 'Video' ): ?>
 																	<div class="button grid-button">
 																		<!-- View <i class="fal fa-arrow-right"></i> -->
-																		Watch <i class="far fa-video"></i>
+																		Watch <i class="fal fa-video"></i>
 																	</div>
 																<?php endif; ?>
 															</div>
