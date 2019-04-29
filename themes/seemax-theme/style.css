@@ -1194,6 +1194,7 @@ figcaption {
       border-right: 1px solid #e4e4e4; }
 
 .grid-section-group {
+  width: 100%;
   margin-bottom: 75px; }
 
 .grid-section-intro {
@@ -1243,7 +1244,7 @@ figcaption {
     padding: 8px 0px;
     border-top: 1px solid #e4e4e4;
     border-bottom: 1px solid #e4e4e4;
-    font-size: 11px; }
+    font-size: 10px; }
   .grid-item .grid-date {
     font-weight: 400;
     margin-bottom: 0px;
@@ -1407,6 +1408,7 @@ li.current-menu-item + li:before {
     width: 80%; }
     .header-logo img {
       max-width: 280px; } }
+
 
 .single-public-appearance .grid-date {
   margin-top: 0px;

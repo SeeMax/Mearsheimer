@@ -419,52 +419,202 @@ function is_post_type($type)
 
 /* CUSTOM POST TYPES  */
 
-// add_action('init', 'create_post_type');
+add_action('init', 'create_post_type');
 
-//  function create_post_type()
-//  {
-//      register_post_type('events',
-//      // CPT Options
-//          array(
-//              'labels' => array(
-//                  'name' => __('Events'),
-//                  'singular_name' => __('Event')
-//              ),
-//              'public' => true,
-//              'menu_icon' => 'dashicons-portfolio',
-//              'has_archive' => true,
-//              'supports' => array('title','editor'),
-//          )
-//      );
-//  }
+ function create_post_type()
+ {
+     register_post_type('books',
+     // CPT Options
+         array(
+             'labels' => array(
+                 'name' => __('Books'),
+                 'singular_name' => __('Books')
+             ),
+             'public' => true,
+             'menu_icon' => 'dashicons-media-document',
+             'show_in_rest' => true,
+             'has_archive' => false,
+             'supports' => array('title','editor', 'publicize'),
+         )
+     );
+
+     register_post_type('opeds',
+     // CPT Options
+         array(
+             'labels' => array(
+                 'name' => __('Op-Eds'),
+                 'singular_name' => __('Op Ed')
+             ),
+             'public' => true,
+             'menu_icon' => 'dashicons-media-document',
+             'show_in_rest' => true,
+             'has_archive' => false,
+             'supports' => array('title','editor', 'publicize'),
+         )
+     );
+
+     register_post_type('articles_chapters',
+     // CPT Options
+         array(
+             'labels' => array(
+                 'name' => __('Articles and Book Chapters'),
+                 'singular_name' => __('Article / Book Chapter')
+             ),
+             'public' => true,
+             'menu_icon' => 'dashicons-media-document',
+             'show_in_rest' => true,
+             'has_archive' => false,
+             'supports' => array('title','editor', 'publicize'),
+         )
+     );
+
+     // register_post_type('public_affairs',
+     // // CPT Options
+     //     array(
+     //         'labels' => array(
+     //             'name' => __('Public Affairs Commentary'),
+     //             'singular_name' => __('Commentary')
+     //         ),
+     //         'public' => true,
+     //         'menu_icon' => 'dashicons-media-document',
+     //         'show_in_rest' => true,
+     //         'has_archive' => false,
+     //         'supports' => array('title','editor', 'publicize'),
+     //     )
+     // );
+
+     register_post_type('unpublished_works',
+     // CPT Options
+         array(
+             'labels' => array(
+                 'name' => __('Unpublished Works'),
+                 'singular_name' => __('Unpublished Work')
+             ),
+             'public' => true,
+             'menu_icon' => 'dashicons-media-document',
+             'show_in_rest' => true,
+             'has_archive' => false,
+             'supports' => array('title','editor', 'publicize'),
+         )
+     );
+
+     register_post_type('courses_taught',
+     // CPT Options
+         array(
+             'labels' => array(
+                 'name' => __('Courses Taught'),
+                 'singular_name' => __('Course')
+             ),
+             'public' => true,
+             'menu_icon' => 'dashicons-welcome-view-site',
+             'show_in_rest' => true,
+             'has_archive' => false,
+             'supports' => array('title','editor', 'publicize'),
+         )
+     );
+
+     register_post_type('radio_tv_appearances',
+     // CPT Options
+         array(
+             'labels' => array(
+                 'name' => __('Radio and TV Appearances'),
+                 'singular_name' => __('Radio / TV Appearance')
+             ),
+             'public' => true,
+             'menu_icon' => 'dashicons-welcome-view-site',
+             'show_in_rest' => true,
+             'has_archive' => false,
+             'supports' => array('title','editor', 'publicize'),
+         )
+     );
+
+     register_post_type('interviews',
+     // CPT Options
+         array(
+             'labels' => array(
+                 'name' => __('Interviews'),
+                 'singular_name' => __('Interview')
+             ),
+             'public' => true,
+             'menu_icon' => 'dashicons-welcome-view-site',
+             'show_in_rest' => true,
+             'has_archive' => false,
+             'supports' => array('title','editor', 'publicize'),
+         )
+     );
+
+     register_post_type('public_talks',
+     // CPT Options
+         array(
+             'labels' => array(
+                 'name' => __('Public Talks'),
+                 'singular_name' => __('Public Talk')
+             ),
+             'public' => true,
+             'menu_icon' => 'dashicons-welcome-view-site',
+             'show_in_rest' => true,
+             'has_archive' => false,
+             'supports' => array('title','editor', 'publicize'),
+         )
+     );
+ }
 
 /* 	CPT TAXONOMIES 	*/
-
-// add_action('init', 'add_events_taxonomies');
-
-// function add_events_taxonomies()
+//
+// add_action('init', 'add_publication_taxonomies');
+//
+// function add_publication_taxonomies()
 // {
 //    $labels = array(
-//        'name'            => 'Types',
-//        'singular_name'   => 'Type',
+//        'name'            => 'Publication Types',
+//        'singular_name'   => 'Publication Type',
 //        'search_items'    => 'Search Types',
 //        'edit_item'       => 'Edit Type',
 //        'update_item'     => 'Update Type',
 //        'add_new_item'     => 'Add New Type',
 //        'new_item_name'    => 'New Type',
-//        'menu_name'        => 'Type',
+//        'menu_name'        => 'Publication Type',
 //    );
 //    $args = array(
 //        'labels'            => $labels,
 //        'public'            =>  true,
 //        'hierarchical'      =>  true,
 //        'show_in_nav_menus' =>  true,
-//       	'has_archive'       =>  true,
+//        'show_in_rest'      => true,
+//       	'has_archive'      =>  true,
 //        'show_ui'           =>  true,
 //        'show_admin_column' =>  true,
-//        'rewrite'           =>  array('slug' => 'event-type', 'with_front' => false),
+//        'rewrite'           =>  array('slug' => 'pubication-type', 'with_front' => false),
 //    );
-//    register_taxonomy('event-type', array('events'), $args);
+//    register_taxonomy('publication-type', array('publications'), $args);
+// }
+//
+// add_action('init', 'add_appearance_taxonomies');
+//
+// function add_appearance_taxonomies()
+// {
+//    $labels = array(
+//        'name'            => 'Appearance Types',
+//        'singular_name'   => 'Appearance Type',
+//        'search_items'    => 'Search Types',
+//        'edit_item'       => 'Edit Type',
+//        'update_item'     => 'Update Type',
+//        'add_new_item'     => 'Add New Type',
+//        'new_item_name'    => 'New Type',
+//        'menu_name'        => 'Appearance Type',
+//    );
+//    $args = array(
+//        'labels'            => $labels,
+//        'public'            =>  true,
+//        'hierarchical'      =>  true,
+//        'show_in_nav_menus' =>  true,
+//        'show_in_rest'      => true,
+//       	'has_archive'      =>  true,
+//        'show_ui'           =>  true,
+//        'show_admin_column' =>  true,
+//        'rewrite'           =>  array('slug' => 'appearance-type', 'with_front' => false),
+//    );
+//    register_taxonomy('appearance-type', array('appearances'), $args);
 // }
 
 
