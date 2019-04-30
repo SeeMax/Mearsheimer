@@ -12,6 +12,18 @@ body {
 	position: relative;
 }
 
+
+body.coming-soon {
+
+	nav {
+		display: none;
+	}
+
+	.main-section {
+		min-height: 50vh;
+	}
+}
+
 .wrapper {
 	width:100%;
 	min-height: 100%;
@@ -254,16 +266,34 @@ figcaption {
 // 1024px And Below
 @media screen and (max-width: 1024px){
 
+	.hero-pic {
+		right:-10%;
+	}
+
+	.hero-section {
+
+		.content {
+			padding-right:30%;
+		}
+	}
 }
 
 // 767px And Below
 @media screen and (max-width: 767px){
 
 	.hero-pic {
+		right:0;
 		position: relative;
 		margin-bottom:-35px;
 		height:auto;
 		width:100%;
+	}
+
+	.hero-section {
+
+		.content {
+			padding-right:25px;
+		}
 	}
 
 	h1 {

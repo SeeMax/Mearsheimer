@@ -1,7 +1,3 @@
-(function ($, root, undefined) {$(function () {
-'use strict';
-//USE THE BELOW AS TEMPLATE FOR FUNCTION FILES
-
 $(function mobileMenu() {
 
 	$(".menuToggle").on('click', function() {
@@ -41,5 +37,3 @@ $(function mobileMenu() {
 	});
 
 });
-
-});})(jQuery, this);

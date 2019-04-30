@@ -4,9 +4,15 @@
 
   .hero-section {
 
+    h1 {
+      text-align: center;
+      width:100%;
+      border-bottom: 0px solid $maroon;
+      // font-size:3em;
+    }
+
     .content {
-      padding-top:30px;
-      padding-bottom:20px;
+      padding:26px 0 6px 0;
     }
   }
 

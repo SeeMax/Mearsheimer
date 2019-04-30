@@ -16,7 +16,7 @@
 
 .header-logo {
 	position: relative;
-	width:450px;
+	width:400px;
 	height:auto;
 
 	img {
@@ -40,7 +40,7 @@
 		display: flex;
 		flex-wrap:wrap;
 		align-items: center;
-		font-size:13px;
+		font-size:14px;
 	}
 
 	li {
@@ -119,10 +119,6 @@ li.current-menu-item {
 	}
 }
 
-.mobile-menu {
-	display: none;
-}
-
 li.current-menu-item + li {
 
 	&:before {
@@ -131,12 +127,144 @@ li.current-menu-item + li {
 
 }
 
+.mobile-menu {
+	display: none;
+}
+
 // 1024px And Below
 @media screen and (max-width: 1024px){
 
 	.header {
 
+		.header-logo {
+			z-index: 100;
+		}
+
+		.mobile-menu {
+			cursor: pointer;
+			display: block;
+			position: absolute;
+			top:52px;
+			right:26px;
+			z-index:100;
+			display: flex;
+			flex-wrap:wrap;
+			align-items:center;
+			justify-content:center;
+			width:20px;
+			height:16px;
+
+			span {
+				display: block;
+				height:2px;
+				width:100%;
+				background-color: $maroon;
+			}
+		}
+
+		.main-nav {
+			position: fixed;
+			top:0;
+			left:101%;
+			height:100vh;
+			width:100%;
+			background-color: white;
+			color:white;
+			z-index: 98;
+			text-align: center;
+
+			ul {
+				margin-top:15vh;
+				height:80vh;
+				padding-left:25px;
+				padding-right:25px;
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
+				padding-top:3vh;
+			}
+
+			li {
+				font-size:1.2em;
+				width:100%;
+				text-align: left;
+				margin-bottom: 3vh;
+
+				&:before {
+					display: none;
+				}
+			}
+
+			.sub-menu {
+				opacity:1;
+				font-size:16px;
+				background:#f9f9f9;
+				flex-wrap:wrap;
+				position: relative;
+				z-index: 999;
+				top:0;
+				left:0;
+				width:auto;
+				height:auto;
+				padding:14px 0px 0px 0px;
+				margin-top:10px;
+
+				li {
+					margin-bottom:8px;
+				}
+
+				a {
+					font-weight:400;
+
+
+					&:hover {
+
+					}
+				}
+
+				.current-menu-item {
+
+					a {
+						font-weight:800;
+
+					}
+				}
+			}
+
+			.sub-menu-title {
+				display: none;
+			}
+		}
 	}
+
+	li.current-menu-item {
+		border-top: 1px solid $offWhite;
+		border-bottom: 1px solid $offWhite;
+
+		&:before {
+			display: none;
+		}
+
+		a {
+			color:$red;
+		}
+
+		&:hover {
+
+			a {
+				color:white;
+			}
+		}
+	}
+
+	li.current-menu-item + li {
+
+		&:before {
+			display: none;
+		}
+
+	}
+
 }
 
 
@@ -145,13 +273,34 @@ li.current-menu-item + li {
 
 	.header {
 
+		.content {
+			padding-left:20px;
+		}
+
+		.main-nav {
+
+			ul {
+				margin-top:18vh;
+
+				li {
+
+					&:hover {
+
+						a {
+							color:$maroon;
+						}
+					}
+				}
+			}
+		}
+
 	}
 
 	.header-logo {
-		width:80%;
+		width:75%;
 
 		img {
-			max-width:280px;
+
 		}
 	}
 

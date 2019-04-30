@@ -791,7 +791,7 @@ function remove_menus(){
     if (!in_array($current_user->ID, array(1))) {
 
       remove_menu_page( 'edit.php' );                  //Posts
-      remove_menu_page( 'index.php' );                  //Dashboard
+      // remove_menu_page( 'index.php' );                  //Dashboard
     //   remove_menu_page( 'jetpack' );                    //Jetpack*
       remove_menu_page( 'edit-comments.php' );          //Comments
       remove_menu_page( 'themes.php' );                 //Appearance
