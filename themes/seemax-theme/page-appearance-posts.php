@@ -3,7 +3,7 @@
 	<?php get_template_part('partials/_duotone-svg');?>
 	<?php while (have_posts()) : the_post(); ?>
 		<section class="hero-section">
-			<img class="hero-pic duotone" src="<?php echo get_template_directory_uri(); ?>/img/jjm-headshot-2.jpg" >
+			<img class="hero-pic duotone" src="<?php echo get_template_directory_uri(); ?>/img/public-back.jpg" >
 			<div class="content">
 				<h1><?php the_title(); ?></h1>
 				<?php the_content(); ?>

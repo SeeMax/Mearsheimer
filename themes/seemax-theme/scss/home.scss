@@ -1,0 +1,50 @@
+@import "colors";
+
+.home-page {
+
+  .hero-section {
+
+    .content {
+      
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    h2, h3,h4,h5 {
+      width:auto;
+      display: inline-block;
+    }
+
+    figcaption {
+      color:$offWhite;
+      border-bottom:1px solid $red;
+    }
+
+    a {
+      text-decoration: underline;
+      color:$lightGray;
+    }
+  }
+}
+
+
+
+
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+  .home-page {
+
+  }
+}
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+  .home-page {
+
+  }
+}

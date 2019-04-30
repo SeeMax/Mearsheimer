@@ -216,6 +216,7 @@ section {
   padding: 60px 25px; }
 
 .no-flex {
+  overflow: auto;
   display: block; }
 
 .wp-block-image .alignleft {
@@ -322,7 +323,8 @@ figcaption {
     min-width: 50%;
     width: auto; }
   .hero-section .content {
-    padding-top: 70px; }
+    padding-top: 70px;
+    padding-right: 20%; }
 
 .hero-pic {
   position: absolute;
@@ -379,6 +381,8 @@ figcaption {
 
 @media screen and (max-width: 767px) {
   .hero-pic {
+    position: relative;
+    margin-bottom: -35px;
     height: auto;
     width: 100%; }
   h1 {
@@ -1409,6 +1413,24 @@ li.current-menu-item + li:before {
     .header-logo img {
       max-width: 280px; } }
 
+.home-page .hero-section h1 {
+  margin-bottom: 30px; }
+
+.home-page .hero-section h2, .home-page .hero-section h3, .home-page .hero-section h4, .home-page .hero-section h5 {
+  width: auto;
+  display: inline-block; }
+
+.home-page .hero-section figcaption {
+  color: #e4e4e4;
+  border-bottom: 1px solid #591829; }
+
+.home-page .hero-section a {
+  text-decoration: underline;
+  color: #92A4A6; }
+
+.photos-page .hero-section .content {
+  padding-top: 30px;
+  padding-bottom: 20px; }
 
 .single-public-appearance .grid-date {
   margin-top: 0px;

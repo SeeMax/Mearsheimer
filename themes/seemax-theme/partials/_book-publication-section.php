@@ -45,7 +45,7 @@
                 </div>
               <?php elseif( get_sub_field('link') == 'Link' ): ?>
                 <div class="button grid-button">
-                  View <i class="fal fa-globe"></i>
+                  Buy Now <i class="fab fa-amazon"></i>
                 </div>
               <?php endif; ?>
             </div>

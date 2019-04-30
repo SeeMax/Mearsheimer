@@ -45,6 +45,7 @@ section {
 }
 
 .no-flex {
+	overflow: auto;
 	display: block;
 }
 
@@ -180,6 +181,7 @@ figcaption {
 
 	.content {
 		padding-top:70px;
+		padding-right:20%;
 	}
 }
 
@@ -258,6 +260,8 @@ figcaption {
 @media screen and (max-width: 767px){
 
 	.hero-pic {
+		position: relative;
+		margin-bottom:-35px;
 		height:auto;
 		width:100%;
 	}
