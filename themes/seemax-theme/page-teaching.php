@@ -3,7 +3,9 @@
 	<?php get_template_part('partials/_duotone-svg');?>
 	<?php while (have_posts()) : the_post(); ?>
 		<section class="hero-section">
-			<img class="hero-pic duotone" src="<?php echo get_template_directory_uri(); ?>/img/teaching-back.jpg" >
+			<svg viewBox="0 0 100 100" preserveAspectRatio="none" class="hero-pic">
+				<image height="100%" width='100%' xlink:href="<?php echo get_template_directory_uri(); ?>/img/teaching-back.jpg" filter="url(#duotone)" />
+			</svg>
 			<div class="content">
 				<h1 class="c-width-50"><?php the_title(); ?></h1>
 				<?php the_content(); ?>

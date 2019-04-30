@@ -1,12 +1,15 @@
 @import "colors";
 
 .grid-container-two {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  width:100%;
+  height:auto;
+  display: flex;
+  flex-wrap:wrap;
+  // grid-template-columns: 1fr 1fr;
   margin-top:30px;
 
   .grid-item {
+    width:50%;
     border: 1px solid $offWhite;
     border-top: 0px solid $offWhite;
 
@@ -25,12 +28,14 @@
 }
 
 .grid-container-three {
-  display: grid;
-  grid-template-columns:1fr 1fr 1fr;
-  grid-template-rows: auto;
+  width:100%;
+  height:auto;
+  display: flex;
+  flex-wrap:wrap;
   margin-top:30px;
 
   .grid-item {
+    width:33.3333%;
     border: 1px solid $offWhite;
     border-top: 0px solid $offWhite;
     border-right:0px solid white;
@@ -175,6 +180,13 @@
 // 1024px And Below
 @media screen and (max-width: 1024px){
 
+  .grid-container-three {
+
+    .grid-item {
+      width:50%;
+    }
+  }
+
 }
 
 // 767px And Below
@@ -184,6 +196,7 @@
     grid-template-columns: 1fr;
 
     .grid-item {
+      width:100%;
 
       &:nth-of-type(1) {
         border-top:1px solid $offWhite;
@@ -202,6 +215,7 @@
   .grid-container-three {
 
     .grid-item {
+      width:100%;
       border-right:1px solid $offWhite;
 
       &:nth-of-type(1) {
@@ -211,6 +225,7 @@
   }
 
   .grid-item {
+    width:100%;
     padding-top:34px;
     padding-bottom:34px;
 

@@ -7,7 +7,8 @@
 					while ( have_rows('curriculum_vitae_bar') ) : the_row();?>
 					<?php the_sub_field('copy');?>
 					<div class="button">
-						<a class="c-block-fill" href="<?php $linkName = get_sub_field('pdf_link');?>"></a>
+						<?php $linkName = get_sub_field('pdf_link');?>
+						<a class="c-block-fill" href="<?php echo $linkName;?>"></a>
 						PDF <i class="fal fa-file"></i>
 					</div>
 					<?php endwhile;?>

@@ -33,7 +33,8 @@ gulp.task('sass', function(cb) {
 gulp.task('css', ['sass'], function() {
   return gulp.src('style.css')
     .pipe(autoprefixer({
-      browsers: ['last 2 versions']
+      grid: true,
+      browsers: ['>1%']
     }))
     .pipe(gulp.dest(''))
 });

@@ -392,7 +392,7 @@ if (function_exists('acf_add_options_page')) {
         'menu_slug'    => 'contact_info',
         'capability'    => 'edit_posts',
         'redirect'    => false,
-        'icon_url' => 'dashicons-media-spreadsheet',
+        'icon_url' => 'dashicons-megaphone',
         'position' => 6
     ));
 }
@@ -431,7 +431,7 @@ add_action('init', 'create_post_type');
                  'singular_name' => __('Books')
              ),
              'public' => true,
-             'menu_icon' => 'dashicons-media-document',
+             'menu_icon' => 'dashicons-welcome-write-blog',
              'show_in_rest' => true,
              'has_archive' => false,
              'supports' => array('title','editor', 'publicize'),
@@ -446,7 +446,7 @@ add_action('init', 'create_post_type');
                  'singular_name' => __('Op Ed')
              ),
              'public' => true,
-             'menu_icon' => 'dashicons-media-document',
+             'menu_icon' => 'dashicons-welcome-write-blog',
              'show_in_rest' => true,
              'has_archive' => false,
              'supports' => array('title','editor', 'publicize'),
@@ -461,7 +461,7 @@ add_action('init', 'create_post_type');
                  'singular_name' => __('Article / Book Chapter')
              ),
              'public' => true,
-             'menu_icon' => 'dashicons-media-document',
+             'menu_icon' => 'dashicons-welcome-write-blog',
              'show_in_rest' => true,
              'has_archive' => false,
              'supports' => array('title','editor', 'publicize'),
@@ -476,7 +476,7 @@ add_action('init', 'create_post_type');
      //             'singular_name' => __('Commentary')
      //         ),
      //         'public' => true,
-     //         'menu_icon' => 'dashicons-media-document',
+     //         'menu_icon' => 'dashicons-welcome-write-blog',
      //         'show_in_rest' => true,
      //         'has_archive' => false,
      //         'supports' => array('title','editor', 'publicize'),
@@ -491,7 +491,7 @@ add_action('init', 'create_post_type');
                  'singular_name' => __('Unpublished Work')
              ),
              'public' => true,
-             'menu_icon' => 'dashicons-media-document',
+             'menu_icon' => 'dashicons-welcome-write-blog',
              'show_in_rest' => true,
              'has_archive' => false,
              'supports' => array('title','editor', 'publicize'),
@@ -506,7 +506,7 @@ add_action('init', 'create_post_type');
                  'singular_name' => __('Course')
              ),
              'public' => true,
-             'menu_icon' => 'dashicons-welcome-view-site',
+             'menu_icon' => 'dashicons-welcome-learn-more',
              'show_in_rest' => true,
              'has_archive' => false,
              'supports' => array('title','editor', 'publicize'),
@@ -521,7 +521,7 @@ add_action('init', 'create_post_type');
                  'singular_name' => __('Radio / TV Appearance')
              ),
              'public' => true,
-             'menu_icon' => 'dashicons-welcome-view-site',
+             'menu_icon' => 'dashicons-format-chat',
              'show_in_rest' => true,
              'has_archive' => false,
              'supports' => array('title','editor', 'publicize'),
@@ -536,7 +536,7 @@ add_action('init', 'create_post_type');
                  'singular_name' => __('Interview')
              ),
              'public' => true,
-             'menu_icon' => 'dashicons-welcome-view-site',
+             'menu_icon' => 'dashicons-format-chat',
              'show_in_rest' => true,
              'has_archive' => false,
              'supports' => array('title','editor', 'publicize'),
@@ -551,7 +551,7 @@ add_action('init', 'create_post_type');
                  'singular_name' => __('Public Talk')
              ),
              'public' => true,
-             'menu_icon' => 'dashicons-welcome-view-site',
+             'menu_icon' => 'dashicons-format-chat',
              'show_in_rest' => true,
              'has_archive' => false,
              'supports' => array('title','editor', 'publicize'),

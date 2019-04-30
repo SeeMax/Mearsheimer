@@ -2,10 +2,10 @@
 <html <?php language_attributes(); ?> class="no-js loader-class">
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
-	<title><?php the_title(); ?></title>
+	<title>Mearsheimer | <?php the_title(); ?></title>
 
 	<!-- <link href="//www.google-analytics.com" rel="dns-prefetch"> -->
-  <link href="<?php echo get_template_directory_uri(); ?>/img/favicon.png" rel="shortcut icon">
+  <link href="<?php echo get_template_directory_uri(); ?>/img/jjm-favicon.png" rel="shortcut icon">
    <!-- <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed"> -->
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
