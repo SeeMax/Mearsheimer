@@ -224,4 +224,15 @@
       }
     }
   }
+
+  .featured-work-section {
+
+    .grid-name {
+      font-size:3em; 
+    }
+
+    .grid-publication-name, .grid-date, .grid-author  {
+      font-size:16px;
+    }
+  }
 }
