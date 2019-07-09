@@ -25,16 +25,48 @@
 								<div class="color-back"></div>
 								<div class="grid-info">
 									<h4 class="grid-date">
-										<?php the_field('courses_date'); ?>
+										<?php if(get_field('courses_pdf_date')):?>
+											<?php the_field('courses_pdf_date'); ?> /
+										<?php endif;?>
+										<?php if(get_field('courses_pdf_2_date')):?>
+											<?php the_field('courses_pdf_2_date'); ?> /
+										<?php endif;?>
+										<?php if(get_field('courses_pdf_3_date')):?>
+											<?php the_field('courses_pdf_3_date'); ?>
+										<?php endif;?>
 									</h4>
 									<h3 class="grid-name">
 										<?php the_title(); ?>
 									</h3>
 								</div>
-								<div class="button grid-button">
-									PDF <i class="fal fa-file"></i>
+								<div class="course-pdf-group">
+									<?php
+										$pdf1 = get_field('courses_pdf');
+										$pdf1date = get_field('courses_pdf_date');
+										$pdf2 = get_field('courses_pdf_2');
+										$pdf2date = get_field('courses_pdf_2_date');
+										$pdf3 = get_field('courses_pdf_3');
+										$pdf3date = get_field('courses_pdf_3_date');
+									?>
+									<?php if($pdf1):?>
+										<div class="button grid-button">
+											<?php echo $pdf1date;?> PDF <i class="fal fa-file"></i>
+											<a class="c-block-fill" href='<?php echo $pdf1;?>'></a>
+										</div>
+									<?php endif;?>
+									<?php if($pdf2):?>
+										<div class="button grid-button">
+											<?php echo $pdf2date;?> PDF <i class="fal fa-file"></i>
+											<a class="c-block-fill" href='<?php echo $pdf2;?>'></a>
+										</div>
+									<?php endif;?>
+									<?php if($pdf3):?>
+										<div class="button grid-button">
+											<?php echo $pdf3date;?> PDF <i class="fal fa-file"></i>
+											<a class="c-block-fill" href='<?php echo $pdf3;?>'></a>
+										</div>
+									<?php endif;?>
 								</div>
-								<a class="c-block-fill" href='<?php the_sub_field('courses_pdf'); ?>'></a>
 							</div>
 						<?php endwhile;?>
 					</div>

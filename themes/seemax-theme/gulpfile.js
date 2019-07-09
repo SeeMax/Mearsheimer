@@ -12,7 +12,7 @@ var pump = require('pump');
 gulp.task('browserSync', function() {
   browserSync.init({
     notify:false,
-    proxy: "http://mearsheimer:8888",
+    proxy: "https://mearsheimer:8890",
     port: 5000,
     open: "internal"
   })

@@ -23,12 +23,12 @@ if( $post_object ):$post = $post_object;setup_postdata( $post );?>
           <h4 class="grid-author">
             <?php the_sub_field('author');?>
           </h4>
-          <?php if($pubNote):?>
-            <div class="grid-item-note">
-              <?php echo $pubNote;?>
-            </div>
-          <?php endif;?>
         </div>
+        <?php if($pubNote):?>
+          <div class="grid-item-note">
+            <?php echo $pubNote;?>
+          </div>
+        <?php endif;?>
         <div class="single-publication-link">
           <?php if( get_sub_field('link') == 'File' ): ?>
             <div class="button grid-button">

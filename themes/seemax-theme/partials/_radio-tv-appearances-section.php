@@ -2,7 +2,7 @@
   <div class="grid-section-intro">
     <h2>Radio and TV Appearances</h2>
   </div>
-  <div class="public-appearance-section-appearances grid-container-three">
+  <div class="public-appearance-section-appearances grid-container-two">
     <?php $loop = new WP_Query( array(
       'post_type' => 'radio_tv_appearances',
       'posts_per_page' => -1,
