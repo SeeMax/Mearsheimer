@@ -13,18 +13,18 @@
     }
 
     .hero-image {
-      width:auto;
-      max-width:470px;
+      width:47%;
+      max-width:400px;
       order:2;
       margin:35px 0px;
 
       img {
         width:100%;
-        border-left:16px solid #d6d6d6;
-        border-top:16px solid #bfbfbf;
-        border-right:16px solid #afafaf;
-        border-bottom:16px solid $lightGray;
-        border-width: 12px;
+        // border-left:16px solid #d6d6d6;
+        // border-top:16px solid #bfbfbf;
+        // border-right:16px solid #afafaf;
+        // border-bottom:16px solid $lightGray;
+        // border-width: 12px;
       }
     }
 
@@ -45,7 +45,7 @@
     .hero-words {
       flex:1;
       order:1;
-      padding:0px 120px 50px 0px;
+      padding:0px 100px 0px 0px;
     }
 
     h1 {
@@ -228,7 +228,7 @@
   .featured-work-section {
 
     .grid-name {
-      font-size:3em; 
+      font-size:3em;
     }
 
     .grid-publication-name, .grid-date, .grid-author  {

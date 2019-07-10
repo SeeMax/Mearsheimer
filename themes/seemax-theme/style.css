@@ -172,6 +172,7 @@ a img.aligncenter {
   h3 {
     page-break-after: avoid; } }
 
+@charset "UTF-8";
 html, body {
   height: 100%;
   width: 100%; }
@@ -324,6 +325,30 @@ figcaption {
   .hero-section .content {
     padding-top: 70px;
     padding-right: 20%; }
+  .hero-section ul {
+    list-style: none;
+    margin-top: -.5em;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: start;
+            align-items: flex-start; }
+  .hero-section li {
+    display: inline-block;
+    margin: 0;
+    padding: 8px 0px;
+    padding-left: 16px; }
+    .hero-section li:before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: maroon;
+      line-height: 1;
+      top: 13px;
+      font-weight: 800; }
 
 .hero-pic {
   position: absolute;
@@ -1014,6 +1039,8 @@ figcaption {
     flex-wrap: wrap;
     height: auto;
     align-content: flex-start;
+    -webkit-box-align: start;
+            align-items: flex-start;
     padding: 26px 30px 22px 30px;
     margin-bottom: 20px;
     border-left: 1px solid #f5f5f5; }
@@ -1171,6 +1198,18 @@ figcaption {
     padding-left: 16px; }
     .general-page .two-row-list li:nth-of-type(1) {
       border-top: 1px solid #e4e4e4; }
+
+.general-page .has-media-on-the-right .wp-block-media-text__content {
+  padding-left: 0; }
+
+.has-media-on-the-right .wp-block-media-text__content {
+  padding-left: 0; }
+
+@media screen and (max-width: 767px) {
+  .wp-block-media-text {
+    display: block; }
+    .wp-block-media-text .wp-block-media-text__media {
+      margin-bottom: 20px; } }
 
 .grid-item {
   position: relative;
@@ -1520,18 +1559,13 @@ li.current-menu-item + li:before {
   padding: 0px 25px; }
 
 .home-page .hero-section .hero-image {
-  width: auto;
-  max-width: 470px;
+  width: 47%;
+  max-width: 400px;
   -webkit-box-ordinal-group: 3;
           order: 2;
   margin: 35px 0px; }
   .home-page .hero-section .hero-image img {
-    width: 100%;
-    border-left: 16px solid #d6d6d6;
-    border-top: 16px solid #bfbfbf;
-    border-right: 16px solid #afafaf;
-    border-bottom: 16px solid #92A4A6;
-    border-width: 12px; }
+    width: 100%; }
 
 .home-page .hero-section .hero-image-caption {
   width: 100%;
@@ -1549,7 +1583,7 @@ li.current-menu-item + li:before {
           flex: 1;
   -webkit-box-ordinal-group: 2;
           order: 1;
-  padding: 0px 120px 50px 0px; }
+  padding: 0px 100px 0px 0px; }
 
 .home-page .hero-section h1 {
   margin-bottom: 30px; }

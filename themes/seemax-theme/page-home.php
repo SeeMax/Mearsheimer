@@ -6,11 +6,11 @@
 			<div class="content">
 				<!-- <h1><?php the_title();?></h1> -->
 				<div class="hero-image">
-					<img src="<?php echo get_template_directory_uri(); ?>/img/Mearchiavelli-VIII.jpg"/>
-					<div class="hero-image-caption">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/Mearchiavelli-VIII-edit-5.jpg"/>
+					<!-- <div class="hero-image-caption">
 						Mearchiavelli<br />
 						<span>Marwane Pallas, The Philomathean Society</span>
-					</div>
+					</div> -->
 				</div>
 				<div class="hero-words">
 					<?php the_content(); ?>
