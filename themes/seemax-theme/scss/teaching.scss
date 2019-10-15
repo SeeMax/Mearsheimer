@@ -14,6 +14,23 @@
       left:0;
     }
 
+    .grid-date {
+
+      span {
+
+        &:after {
+          content:" /"
+        }
+
+        &:nth-last-of-type(1) {
+
+          &:after {
+            content:""
+          }
+        }
+      }
+    }
+
     &:hover {
 
       .grid-button {

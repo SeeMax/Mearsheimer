@@ -6,6 +6,13 @@ if( $post_object ):$post = $post_object;setup_postdata( $post );?>
 
     <div class="single-public-appearance grid-item grid-item-halves">
       <div class="color-back"></div>
+      <?php if( get_sub_field('link') == 'Embed' ): ?>
+        <div class="embed-video-half c-width-100">
+          <div class="iframe-box">
+            <?php the_sub_field('iframe_link');?>
+          </div>
+        </div>
+      <?php endif;?>
       <div class="grid-info">
         <?php if(get_sub_field('date')):?>
           <h4 class="grid-date">

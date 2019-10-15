@@ -26,13 +26,13 @@
 								<div class="grid-info">
 									<h4 class="grid-date">
 										<?php if(get_field('courses_pdf_date')):?>
-											<?php the_field('courses_pdf_date'); ?> /
+											<span><?php the_field('courses_pdf_date'); ?></span>
 										<?php endif;?>
 										<?php if(get_field('courses_pdf_2_date')):?>
-											<?php the_field('courses_pdf_2_date'); ?> /
+											<span><?php the_field('courses_pdf_2_date'); ?></span>
 										<?php endif;?>
 										<?php if(get_field('courses_pdf_3_date')):?>
-											<?php the_field('courses_pdf_3_date'); ?>
+											<span><?php the_field('courses_pdf_3_date'); ?></span>
 										<?php endif;?>
 									</h4>
 									<h3 class="grid-name">

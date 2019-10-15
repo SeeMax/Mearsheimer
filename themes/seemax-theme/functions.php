@@ -661,11 +661,24 @@ add_action('init', 'create_post_type');
 /*	BRAND ADMIN LOGIN WITH COMPANY 	*/
 
 
+//////////////  SEEMAXWORK  /////////////////
+/////// ADD BRAND NAME AS ADMIN LOGIN //////
+///////////////////////////////////////////
 function custom_login_logo()
 {
-    echo '<style type="text/css">
-	h1 a { background-image: url('.get_template_directory_uri().'/img/logo-admin.png) !important;background-size: 300px 300px !important;width:300px !important;height:300px !important;}
-	</style>';
+  $blog_title = get_bloginfo( 'name' );
+  echo
+  "<style type='text/css'>
+	h1 a {
+    background-image: url('.get_template_directory_uri().'/img/logo-admin.png) !important; display:none !important;
+  }
+
+  h1::after {
+    content:'$blog_title Login';
+    position:relative;
+    line-height:2;
+  }
+	</style>";
 }
 add_action('login_head', 'custom_login_logo');
 

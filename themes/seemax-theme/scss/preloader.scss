@@ -1,0 +1,91 @@
+@import "colors";
+
+#preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	color:gray;
+	font-size:200px;
+	z-index: 999999999999999999999;
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	background:$maroon;
+
+	svg {
+		height:auto;
+		width:50%;
+		max-width:600px;
+	}
+
+  #leftLoad {
+		opacity:0.5;
+		animation:fade1 1s infinite;
+	}
+
+	#middleLoad {
+		animation:fade2 1s infinite;
+	}
+
+	#rightLoad {
+		animation:fade3 1s infinite;
+	}
+}
+
+@keyframes fade1 {
+	0% {
+		opacity:0.33;
+	}
+
+	25% {
+		opacity:0.66;
+	}
+	50% {
+		opacity:1;
+	}
+	75% {
+		opacity:0.66;
+	}
+	100% {
+		opacity:0.33;
+	}
+}
+
+@keyframes fade2 {
+	0% {
+		opacity:1;
+	}
+	25% {
+		opacity:0.66;
+	}
+	50% {
+		opacity:0.33;
+	}
+	75% {
+		opacity:0.66;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@keyframes fade3 {
+	0% {
+		opacity:0.66;
+	}
+	25% {
+		opacity:0.33;
+	}
+	50% {
+		opacity:1;
+	}
+	75% {
+		opacity:0.33;
+	}
+	100% {
+		opacity:0.66;
+	}
+}

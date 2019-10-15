@@ -20,42 +20,42 @@ gulp.task('browserSync', function() {
 
 gulp.task('sass', function(cb) {
   return gulp.src('scss/*.scss')
-    .pipe(sass())
-    .pipe(concat('style.css'))
-    .pipe(gulp.dest(''))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
-    cb(err);
+  .pipe(sass())
+  .pipe(concat('style.css'))
+  .pipe(gulp.dest(''))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
+  cb(err);
 });
 
 // This Funtion Waits for The sass function to complete
 gulp.task('css', ['sass'], function() {
   return gulp.src('style.css')
-    .pipe(autoprefixer({
-      grid: true,
-      browsers: ['>1%']
-    }))
-    .pipe(gulp.dest(''))
+  .pipe(autoprefixer({
+    grid: true,
+    browsers: ['>1%']
+  }))
+  .pipe(gulp.dest(''))
 });
 
 
 gulp.task('concat', function() {
   gulp.src('js/parts/*.js')
-    .pipe(concat('scripts.js', {process: function(src) { return (src.trim() + '\n').replace(/(^|\n)[ \t]*('use strict'|"use strict");?\s*/g, '$1'); }}))
-    .pipe(concat.header('(function ($, root, undefined) {$(function () {\n\'use strict\';\n'))
-    .pipe(concat.footer('\n});})(jQuery, this);\n'))
-    .pipe(gulp.dest(''))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
+  .pipe(concat('scripts.js', {process: function(src) { return (src.trim() + '\n').replace(/(^|\n)[ \t]*('use strict'|"use strict");?\s*/g, '$1'); }}))
+  .pipe(concat.header('(function ($, root, undefined) {$(function () {\n\'use strict\';\n'))
+  .pipe(concat.footer('\n});})(jQuery, this);\n'))
+  .pipe(gulp.dest(''))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
 });
 
 
 gulp.task('lint', ['concat'], function () {
   return gulp.src('scripts.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish', {beep: true}));
+    .pipe(jshint())
+    .pipe(jshint.reporter('jshint-stylish', {beep: true}));
 });
 
 
@@ -68,10 +68,10 @@ gulp.task('minify-css', function() {
 
 gulp.task('uglify', function () {
   pump([
-        gulp.src('scripts.js'),
-        uglify(),
-        gulp.dest('')
-    ]);
+    gulp.src('scripts.js'),
+    uglify(),
+    gulp.dest('')
+  ]);
 });
 
 

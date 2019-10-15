@@ -131,6 +131,39 @@ li.current-menu-item + li {
 	display: none;
 }
 
+.back-to-top {
+	font-size:20px;
+	position: fixed;
+	z-index: 1;
+	bottom:40px;
+	right:40px;
+	width:60px;
+	height:60px;
+	background:white;
+	color:$maroon;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	border-radius: 50%;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+	opacity:0;
+	transition:all .3s ease;
+	cursor: pointer;
+}
+
+.visible-btn {
+	opacity: 0.6;
+	z-index: 100;
+}
+
+.back-to-top.visible-btn {
+	&:hover {
+		opacity: 1;
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
+	}
+}
+
 // 1024px And Below
 @media screen and (max-width: 1024px){
 
@@ -306,5 +339,24 @@ li.current-menu-item + li {
 
 	.logo-subhead {
 		// font-size:14px;
+	}
+
+	.back-to-top {
+		font-size:16px;
+		bottom:30px;
+		right:26px;
+		width:40px;
+		height:40px;
+	}
+
+	.visible-btn {
+		opacity: 0.5;
+	}
+
+	.back-to-top.visible-btn {
+		&:hover {
+			opacity: .5;
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+		}
 	}
 }

@@ -78,6 +78,12 @@
 								<?php get_template_part('partials/_home-featured-articles');?>
 						  <?php elseif($pubType == 'unpublished'):?>
 								<?php get_template_part('partials/_home-featured-unpublished');?>
+							<?php elseif($pubType == 'radiotv'):?>
+								<?php get_template_part('partials/_home-featured-radiotv');?>
+							<?php elseif($pubType == 'interviews'):?>
+								<?php get_template_part('partials/_home-featured-interviews');?>
+							<?php elseif($pubType == 'publictalks'):?>
+								<?php get_template_part('partials/_home-featured-publictalks');?>
 						  <?php endif;?>
 
 
