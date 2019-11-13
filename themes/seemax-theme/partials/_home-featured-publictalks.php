@@ -42,6 +42,11 @@ if( $post_object ):$post = $post_object;setup_postdata( $post );?>
               <!-- View <i class="fal fa-arrow-right"></i> -->
               Watch <i class="fal fa-video"></i>
             </div>
+          <?php elseif( get_sub_field('link') == 'Website' ): ?>
+            <div class="button grid-button">
+              <!-- View <i class="fal fa-arrow-right"></i> -->
+              View <i class="fal fa-globe"></i>
+            </div>
           <?php endif; ?>
         </div>
         <?php if( get_sub_field('link') == 'PDF' ): ?>
@@ -51,6 +56,8 @@ if( $post_object ):$post = $post_object;setup_postdata( $post );?>
           <a class="c-block-fill" href="<?php the_sub_field('audio_link');?>" target="_blank"></a>
         <?php elseif( get_sub_field('link') == 'Video' ): ?>
           <a class="c-block-fill" href="<?php the_sub_field('video_link');?>" target="_blank"></a>
+        <?php elseif( get_sub_field('link') == 'Website' ): ?>
+          <a class="c-block-fill" href="<?php the_sub_field('website_link');?>" target="_blank"></a>
         <?php endif; ?>
       </div>
     <?php endwhile;?>
