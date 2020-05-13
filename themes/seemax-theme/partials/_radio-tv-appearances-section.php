@@ -12,7 +12,7 @@
       <?php if( have_rows('single_public_appearance') ):
         while ( have_rows('single_public_appearance') ) : the_row();?>
 
-          <div class="single-public-appearance grid-item grid-item-halves">
+          <div class="single-public-appearance grid-item grid-item-halves <?php if( get_sub_field('link') == 'Embed' ): ?>full-width-embedd<?php endif;?>">
             <div class="color-back"></div>
             <?php if( get_sub_field('link') == 'Embed' ): ?>
               <div class="embed-video-half c-width-100">
@@ -51,6 +51,11 @@
                   <!-- View <i class="fal fa-arrow-right"></i> -->
                   Watch <i class="fal fa-video"></i>
                 </div>
+              <?php elseif( get_sub_field('link') == 'Website' ): ?>
+                <div class="button grid-button">
+                  <!-- View <i class="fal fa-arrow-right"></i> -->
+                  View <i class="fal fa-globe"></i>
+                </div>
               <?php endif; ?>
             </div>
             <?php if( get_sub_field('link') == 'PDF' ): ?>
@@ -60,6 +65,8 @@
               <a class="c-block-fill" href="<?php the_sub_field('audio_link');?>" target="_blank"></a>
             <?php elseif( get_sub_field('link') == 'Video' ): ?>
               <a class="c-block-fill" href="<?php the_sub_field('video_link');?>" target="_blank"></a>
+            <?php elseif( get_sub_field('link') == 'Website' ): ?>
+              <a class="c-block-fill" href="<?php the_sub_field('website_link');?>" target="_blank"></a>
             <?php endif; ?>
           </div>
         <?php endwhile;?>

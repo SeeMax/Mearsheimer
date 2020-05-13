@@ -12,7 +12,7 @@
       <?php if( have_rows('single_public_appearance') ):
         while ( have_rows('single_public_appearance') ) : the_row();?>
 
-          <div class="single-public-appearance grid-item grid-item-halves">
+          <div class="single-public-appearance grid-item grid-item-halves <?php if( get_sub_field('link') == 'Embed' ): ?>full-width-embedd<?php endif;?>">
             <div class="color-back"></div>
             <div class="grid-info">
               <?php if( get_sub_field('link') == 'Embed' ): ?>

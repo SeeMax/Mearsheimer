@@ -11,7 +11,7 @@
   padding:22px 24px 20px 24px;
   overflow: hidden;
   background:white;
-  box-shadow: 0px 2px 5px -3px rgba(0,0,0,0.25);
+  box-shadow: 0px 2px 7px -3px rgba(0,0,0,0.25);
   transition:all .3s ease-in;
 
   .grid-name {
@@ -145,6 +145,23 @@
   .iframe-item {
     width:100%;
   }
+
+  .full-width-embedd {
+    width:100%;
+    padding:0 24px 0 0;
+
+    .embed-video-half {
+      width:44%;
+      padding-right:24px;
+      margin:0;
+      // order:2;
+    }
+
+    .grid-info {
+      padding:20px 0 20px 24px;
+      // order:1;
+    }
+  }
 }
 
 .grid-container-three {
@@ -221,6 +238,21 @@
 
     .grid-item {
       width:100%;
+    }
+
+    .full-width-embedd {
+      width:100%;
+      padding-right:0;
+
+      .embed-video-half {
+        width:100%;
+      }
+
+      .grid-info {
+        padding:0px;
+        padding:16px 24px 30px 24px;
+        // order:2;
+      }
     }
   }
 
